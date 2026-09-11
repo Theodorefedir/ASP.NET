@@ -1,0 +1,58 @@
+﻿@model Product
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container my-4">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-center mb-0">@Model.Name</h2>
+        </div>
+
+        <div class="row g-0">
+            @* Image *@
+            <div class="col-md-4">
+                <img src="~/images/products/@(Model.Image != null ? Model.Image : "default.png")"
+                     alt="@Model.Name"
+                     class="img-fluid w-100"
+                     style="object-fit: contain; height: 300px; background-color: #bbbbbb;" />
+            </div>
+
+            @* Info *@
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Description</h5>
+                    <p class="card-text">
+                        @(string.IsNullOrEmpty(Model.Description) ? "No description available" : Model.Description)
+                    </p>
+
+                    <dl class="row mt-4">
+                        <dt class="col-sm-4">Id</dt>
+                        <dd class="col-sm-8">@Model.Id</dd>
+
+                        <dt class="col-sm-4">Price</dt>
+                        <dd class="col-sm-8">@Model.Price</dd>
+
+                        <dt class="col-sm-4">Category</dt>
+                        <dd class="col-sm-8">
+                            @if (Model.Category != null)
+                            {
+                                <a asp-controller="Category"
+                                   asp-action="Details"
+                                   asp-route-id="@Model.Category.Id">
+                                    @Model.Category.Name
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="text-muted">No category</span>
+                            }
+                        </dd>
+                    </dl>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

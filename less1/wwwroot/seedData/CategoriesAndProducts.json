@@ -1,0 +1,322 @@
+﻿[
+  {
+    "Name": "Процесори (CPU)",
+    "Description": "Центральні процесори для настільних ПК та серверів.",
+    "Image": "793814ed-f6e8-4316-8bcc-76a76a8428e7.jpg",
+    "Products": [
+      {
+        "Name": "AMD Ryzen 5 7600",
+        "Price": 8999,
+        "Description": "6-ядерний процесор AMD Ryzen для платформи AM5 з підтримкою DDR5."
+      },
+      {
+        "Name": "AMD Ryzen 7 7800X3D",
+        "Price": 16999,
+        "Description": "8-ядерний ігровий процесор з технологією 3D V-Cache."
+      },
+      {
+        "Name": "AMD Ryzen 9 7900X",
+        "Price": 18999,
+        "Description": "12-ядерний високопродуктивний процесор для ігор та робочих задач."
+      },
+      {
+        "Name": "Intel Core i5-14600K",
+        "Price": 13999,
+        "Description": "Потужний процесор Intel Core i5 для сучасних ігрових систем."
+      },
+      {
+        "Name": "Intel Core i7-14700K",
+        "Price": 18999,
+        "Description": "Високопродуктивний процесор Intel Core i7 для ігор та професійних задач."
+      }
+    ]
+  },
+  {
+    "Name": "Материнські плати",
+    "Description": "Плати для об'єднання всіх компонентів системи в єдине ціле.",
+    "Image": "48a67e24-95d8-4ac4-8585-aadeb2595877.jpg",
+    "Products": [
+      {
+        "Name": "ASUS TUF Gaming B650-PLUS",
+        "Price": 8999,
+        "Description": "Материнська плата AM5 на чипсеті B650 з підтримкою DDR5."
+      },
+      {
+        "Name": "MSI MAG B650 Tomahawk WiFi",
+        "Price": 9999,
+        "Description": "Материнська плата для AMD Ryzen з Wi-Fi та підтримкою PCIe 4.0."
+      },
+      {
+        "Name": "Gigabyte B650 AORUS Elite AX",
+        "Price": 9499,
+        "Description": "Ігрова материнська плата AM5 з Wi-Fi та потужною системою живлення."
+      },
+      {
+        "Name": "ASUS PRIME Z790-P WiFi",
+        "Price": 10999,
+        "Description": "Материнська плата Intel LGA1700 на базі чипсета Z790."
+      },
+      {
+        "Name": "MSI PRO Z790-P WiFi",
+        "Price": 10499,
+        "Description": "Материнська плата для процесорів Intel з підтримкою DDR5 та Wi-Fi."
+      }
+    ]
+  },
+  {
+    "Name": "Оперативна пам'ять (RAM)",
+    "Description": "Модулі швидкої тимчасової пам'яті (DDR4, DDR5).",
+    "Image": "773d1607-7c00-4544-998f-58ec3c447c61.jpg",
+    "Products": [
+      {
+        "Name": "Kingston Fury Beast 32GB DDR5 6000MHz",
+        "Price": 4599,
+        "Description": "Комплект DDR5 пам'яті 32 ГБ для сучасних ігрових систем."
+      },
+      {
+        "Name": "Corsair Vengeance 32GB DDR5 6000MHz",
+        "Price": 4999,
+        "Description": "Швидка оперативна пам'ять DDR5 об'ємом 32 ГБ."
+      },
+      {
+        "Name": "G.Skill Trident Z5 RGB 32GB DDR5 6400MHz",
+        "Price": 5799,
+        "Description": "Продуктивний комплект DDR5 пам'яті з RGB-підсвічуванням."
+      },
+      {
+        "Name": "Kingston Fury Beast 16GB DDR4 3200MHz",
+        "Price": 1799,
+        "Description": "Надійний модуль DDR4 пам'яті для домашніх та ігрових ПК."
+      },
+      {
+        "Name": "Corsair Vengeance LPX 32GB DDR4 3600MHz",
+        "Price": 3299,
+        "Description": "Комплект DDR4 пам'яті 32 ГБ із частотою 3600 МГц."
+      }
+    ]
+  },
+  {
+    "Name": "Відеокарти (GPU)",
+    "Description": "Графічні адаптери для ігор, рендерингу та обробки графіки.",
+    "Image": "fec4f980-386a-4055-903d-f71c0591a755.jpg",
+    "Products": [
+      {
+        "Name": "GeForce RTX 4060 8GB",
+        "Price": 15999,
+        "Description": "Відеокарта для комфортного геймінгу у Full HD з підтримкою DLSS."
+      },
+      {
+        "Name": "GeForce RTX 4070 SUPER 12GB",
+        "Price": 29999,
+        "Description": "Продуктивна відеокарта для ігор у 1440p та трасування променів."
+      },
+      {
+        "Name": "GeForce RTX 4080 SUPER 16GB",
+        "Price": 49999,
+        "Description": "Потужна відеокарта для 4K-геймінгу та професійного рендерингу."
+      },
+      {
+        "Name": "Radeon RX 7800 XT 16GB",
+        "Price": 24999,
+        "Description": "Відеокарта AMD з 16 ГБ пам'яті для високої продуктивності у 1440p."
+      },
+      {
+        "Name": "Radeon RX 7900 XTX 24GB",
+        "Price": 42999,
+        "Description": "Флагманська відеокарта AMD для 4K-геймінгу та складних графічних задач."
+      }
+    ]
+  },
+  {
+    "Name": "Накопичувачі (SSD / HDD)",
+    "Description": "Твердотільні та жорсткі диски для зберігання даних.",
+    "Image": "f40a292c-6d15-4e09-aed1-4d958c703d10.jpg",
+    "Products": [
+      {
+        "Name": "Samsung 990 PRO 1TB",
+        "Price": 4499,
+        "Description": "Швидкісний NVMe SSD формату M.2 з інтерфейсом PCIe 4.0."
+      },
+      {
+        "Name": "Kingston KC3000 2TB",
+        "Price": 6499,
+        "Description": "Продуктивний NVMe SSD об'ємом 2 ТБ для ігор та робочих станцій."
+      },
+      {
+        "Name": "WD Black SN850X 1TB",
+        "Price": 4299,
+        "Description": "Ігровий NVMe SSD з високою швидкістю читання та запису."
+      },
+      {
+        "Name": "Crucial MX500 1TB",
+        "Price": 2999,
+        "Description": "Надійний SATA SSD об'ємом 1 ТБ для ПК та ноутбуків."
+      },
+      {
+        "Name": "Seagate BarraCuda 2TB",
+        "Price": 2599,
+        "Description": "Жорсткий диск HDD об'ємом 2 ТБ для зберігання великих обсягів даних."
+      }
+    ]
+  },
+  {
+    "Name": "Блоки живлення",
+    "Description": "Пристрої для забезпечення стабільного живлення всіх компонентів ПК.",
+    "Image": "a476f861-3a56-470a-856d-5db503bb3011.jpg",
+    "Products": [
+      {
+        "Name": "Corsair RM750e 750W",
+        "Price": 4999,
+        "Description": "Модульний блок живлення потужністю 750 Вт із сертифікатом 80 Plus Gold."
+      },
+      {
+        "Name": "be quiet! Pure Power 12 M 850W",
+        "Price": 5999,
+        "Description": "Енергоефективний блок живлення 850 Вт для потужних ігрових систем."
+      },
+      {
+        "Name": "Seasonic Focus GX 750W",
+        "Price": 5499,
+        "Description": "Повністю модульний блок живлення з сертифікатом 80 Plus Gold."
+      },
+      {
+        "Name": "MSI MAG A650BN 650W",
+        "Price": 2799,
+        "Description": "Доступний блок живлення потужністю 650 Вт для середньопродуктивних ПК."
+      },
+      {
+        "Name": "ASUS ROG Strix 1000W Gold",
+        "Price": 8499,
+        "Description": "Потужний блок живлення 1000 Вт для високопродуктивних систем."
+      }
+    ]
+  },
+  {
+    "Name": "Корпуси",
+    "Description": "Захисні шасі для зручного та безпечного розміщення комплектуючих.",
+    "Image": "e8f3861f-224a-49b7-8245-b2808f41831a.jpg",
+    "Products": [
+      {
+        "Name": "NZXT H5 Flow",
+        "Price": 3999,
+        "Description": "Компактний корпус Mid Tower із хорошою вентиляцією."
+      },
+      {
+        "Name": "Corsair 4000D Airflow",
+        "Price": 4499,
+        "Description": "Корпус із сітчастою передньою панеллю для ефективного охолодження."
+      },
+      {
+        "Name": "Fractal Design North",
+        "Price": 6499,
+        "Description": "Стильний корпус із дерев'яними декоративними елементами."
+      },
+      {
+        "Name": "Lian Li Lancool 216",
+        "Price": 4699,
+        "Description": "Просторий ігровий корпус із потужною системою вентиляції."
+      },
+      {
+        "Name": "DeepCool CH560",
+        "Price": 4299,
+        "Description": "Сучасний корпус із підтримкою великих відеокарт та систем рідинного охолодження."
+      }
+    ]
+  },
+  {
+    "Name": "Системи охолодження",
+    "Description": "Кулери, радіатори та комплекти рідинного охолодження (СЖО).",
+    "Image": "31a02bea-1dcf-4aff-8439-d5e0d56c23c2.jpg",
+    "Products": [
+      {
+        "Name": "DeepCool AK620",
+        "Price": 2799,
+        "Description": "Двобаштовий повітряний кулер для продуктивних процесорів."
+      },
+      {
+        "Name": "be quiet! Dark Rock 5",
+        "Price": 3999,
+        "Description": "Тихий процесорний кулер із високою ефективністю охолодження."
+      },
+      {
+        "Name": "Noctua NH-D15",
+        "Price": 4999,
+        "Description": "Преміальний двобаштовий кулер для потужних процесорів."
+      },
+      {
+        "Name": "Arctic Liquid Freezer III 360",
+        "Price": 4999,
+        "Description": "Система рідинного охолодження з радіатором 360 мм."
+      },
+      {
+        "Name": "Corsair iCUE H150i Elite",
+        "Price": 7499,
+        "Description": "Система рідинного охолодження 360 мм з RGB-підсвічуванням."
+      }
+    ]
+  },
+  {
+    "Name": "Звукові карти",
+    "Description": "Дискретні пристрої для виведення та обробки високоякісного звуку.",
+    "Image": "e25e0281-31b1-4372-a1ca-33d5918a39f6.jpg",
+    "Products": [
+      {
+        "Name": "Creative Sound Blaster Audigy FX",
+        "Price": 1799,
+        "Description": "Дискретна звукова карта PCIe для покращення якості звуку."
+      },
+      {
+        "Name": "Creative Sound Blaster Z SE",
+        "Price": 3999,
+        "Description": "Ігрова звукова карта з підтримкою об'ємного звучання."
+      },
+      {
+        "Name": "Creative Sound Blaster AE-5 Plus",
+        "Price": 5799,
+        "Description": "Преміальна звукова карта з високоякісним ЦАП та RGB-підсвічуванням."
+      },
+      {
+        "Name": "ASUS Xonar SE",
+        "Price": 2199,
+        "Description": "Звукова карта формату PCIe з підтримкою багатоканального аудіо."
+      },
+      {
+        "Name": "Creative Sound BlasterX AE-7",
+        "Price": 7999,
+        "Description": "Високоякісна звукова карта для геймерів та аудіофілів."
+      }
+    ]
+  },
+  {
+    "Name": "Мережеві адаптери",
+    "Description": "Wi-Fi модулі та дротові мережеві карти (Ethernet) для підключення до інтернету.",
+    "Image": "fa776b25-4db9-4a0f-b942-babb692c663e.jpg",
+    "Products": [
+      {
+        "Name": "TP-Link Archer TX3000E",
+        "Price": 1999,
+        "Description": "PCIe Wi-Fi 6 адаптер з Bluetooth 5.2 для настільних ПК."
+      },
+      {
+        "Name": "ASUS PCE-AX3000",
+        "Price": 1899,
+        "Description": "Бездротовий мережевий адаптер Wi-Fi 6 з підтримкою Bluetooth."
+      },
+      {
+        "Name": "TP-Link TG-3468",
+        "Price": 599,
+        "Description": "Гігабітна мережева карта PCIe для дротового Ethernet-підключення."
+      },
+      {
+        "Name": "ASUS XG-C100C",
+        "Price": 3799,
+        "Description": "Високошвидкісна мережева карта Ethernet зі швидкістю до 10 Гбіт/с."
+      },
+      {
+        "Name": "TP-Link Archer TXE75E",
+        "Price": 2499,
+        "Description": "PCIe адаптер Wi-Fi 6E з підтримкою діапазону 6 ГГц та Bluetooth."
+      }
+    ]
+  }
+]

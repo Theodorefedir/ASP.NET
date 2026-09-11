@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div>
+    
+    <div class="d-flex">
+        <h2 class="text-center flex-grow-1">Categories</h2>
+        <a asp-controller="Category" asp-action="Create" style="font-size: 2em;" class="me-4">
+            <i class="bi bi-plus-square-fill text-primary"></i>
+        </a>
+    </div>
+    <div class="container">
+        @if(Model.Any())
+        {   
+            <div class="row">
+                @foreach(var category in Model)
+                {
+                    <div class="p-3 col-3">
+                        <div class="card">
+                            <div class="text-center">
+                                <img src="~/images/categories/@(category.Image ?? "default.jpg")" 
+                                     alt="@category.Name" 
+                                     style="object-fit: contain; height: 175px; background-color: #bbbbbb;" 
+                                     class="w-100" />
+                            </div>
+                            <h3 class="card-header">@category.Name</h3>
+                            <div class="card-body">
+                                <p class="card-text">@category.Description</p>
+                            </div>
+                            <div class="text-center p-3">
+                                <a 
+                                    asp-controller="Category" 
+                                    asp-action="Update"
+                                    asp-route-id="@category.Id"
+                                    class="btn btn-success">Edir</a>
+
+                                <a 
+                                    asp-controller="Category" 
+                                    asp-action="Delete" 
+                                    asp-route-id="@category.Id" 
+                                    class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <h3 class="text-center">Category not found</h3>
+        }
+    </div>
+</div>
