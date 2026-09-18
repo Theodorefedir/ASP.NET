@@ -1,12 +1,14 @@
 ﻿using less1.Models;
 using less1.Repositories;
 using less1.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace less1.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductController : Controller
     {
         private readonly ProductRepository _productRepository;
@@ -18,10 +20,48 @@ namespace less1.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public async Task<IActionResult> Index(string? category)
+        public async Task<IActionResult> Index(string? category, string? sortOrder)
         {
-            var products = await _productRepository.Products.ToListAsync();
-            return View(products);
+            IQueryable<Product> products = _productRepository.Products
+                .Include(p => p.Category);
+
+            if (!string.IsNullOrEmpty(category))
+            {
+                products = products
+                    .Where(p => p.Category!.Name.ToLower() == category.ToLower());
+            }
+            if (sortOrder == "price_asc")
+            {
+                products = products.OrderBy(p => p.Price);
+            }
+            else if (sortOrder == "price_desc")
+            {
+                products = products.OrderByDescending(p => p.Price);
+            }
+            else if (sortOrder == "name_desc")
+            {
+                products = products.OrderByDescending(p => p.Name);
+            }
+            //else if (sortOrder == "rating_desc")
+            //{
+            //    products = products.OrderByDescending(p => p.Rating);
+            //}
+            else
+            {
+                products = products.OrderBy(p => p.Name);
+            }
+
+            var viewModel = new ProductsTableVM
+            {
+                Products = products,
+                Categories = await _categoryRepository.Categories.ToListAsync(),
+                SortOrder = sortOrder,
+                //Page = page,
+                //PageCount = pages,
+                //Category = category
+            };
+
+            return View(viewModel);
         }
 
         public async Task<IActionResult> Details(int id) {

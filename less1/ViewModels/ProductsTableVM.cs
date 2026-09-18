@@ -7,5 +7,6 @@ namespace less1.ViewModels
     {
         public IEnumerable<Product> Products { get; set; } = [];
         public IEnumerable<Category> Categories { get; set; } = [];
+        public string? SortOrder { get; set; }
     }
 }
