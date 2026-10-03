@@ -1,24 +1,41 @@
-using System.Diagnostics;
-using less1.Models;
+﻿using less1.Models;
+using less1.Repositories;
+using less1.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace less1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ProductRepository _productRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ProductRepository productRepository)
         {
-            _logger = logger;
+            _productRepository = productRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var products = _productRepository.Products
+                .Include(p => p.Category)
+                .OrderBy(p => p.Id);
+
+            var vm = new HomeVM
+            {
+                Products = products
+            };
+
+            return View(vm);
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult About()
         {
             return View();
         }

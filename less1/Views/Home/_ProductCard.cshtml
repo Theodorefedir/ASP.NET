@@ -1,0 +1,42 @@
+﻿@using less1.Services
+@model Product
+@inject CartService Cart
+
+<div class="card product-card border-0 rounded-4 shadow-sm">
+    <div class="position-relative">
+        <div class="overflow-hidden">
+            <img src="~/images/products/@(Model.Image != null ? Model.Image : "default.jpg")" class="card-img-top product-image" style="object-fit: contain;" alt="Product Image">
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <h5 class="card-title mb-3 fw-bold">@Model.Name</h5>
+        <p class="card-text text-muted mb-4">
+            @Model.Description
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span style="font-size: 1.2rem; font-weight: bold;" class="price">@Model.Price UAH</span>
+            @* Remove button *@
+            @if (Cart.IsInCart(Model.Id))
+            {
+                <a class="btn btn-custom-remove text-black px-4 py-2 rounded-pill"
+                   style="text-decoration: none;"
+                   asp-controller="Cart"
+                   asp-action="Remove"
+                   asp-route-productId="@Model.Id">
+                    Remove from cart
+                </a>
+            }
+            else
+            {
+                @* Add button *@
+                <a class="btn btn-custom text-black px-4 py-2 rounded-pill"
+                   style="text-decoration: none;"
+                   asp-controller="Cart"
+                   asp-action="Add"
+                   asp-route-productId="@Model.Id">
+                    Add to Cart
+                </a>
+            }
+        </div>
+    </div>
+</div>

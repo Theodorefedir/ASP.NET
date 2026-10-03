@@ -21,6 +21,13 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseNpgsql(connectionString);
 });
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(cfg =>
+{
+    cfg.Cookie.HttpOnly = true;
+    cfg.Cookie.IsEssential = true;
+    cfg.IdleTimeout = TimeSpan.FromHours(1);
+});
 
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<less1Context>();
 
@@ -40,8 +47,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => {
 
 builder.Services.AddScoped<CategoryRepository>();
 builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<CartRepository>();
 
 builder.Services.AddScoped<ImageService>();
+builder.Services.AddScoped<CartService>();
 
 
 var app = builder.Build();
@@ -56,6 +65,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();

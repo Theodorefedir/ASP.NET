@@ -6,10 +6,15 @@ namespace less1
 {
     public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
-        public AppDbContext(DbContextOptions options):base(options){
-            
+        public AppDbContext(DbContextOptions options)
+            : base(options)
+        {
         }
-        public DbSet<Product> Products { get; set; }        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -43,7 +48,13 @@ namespace less1
                 .HasColumnType("text");
 
                 e.Property(c => c.Image)
-                .HasMaxLength(255);
+                .HasMaxLength(50);
+            });
+
+            // CartItem
+            modelBuilder.Entity<CartItem>(e =>
+            {
+                e.HasKey(ci => ci.Id);
             });
 
             // Relationships
@@ -54,6 +65,15 @@ namespace less1
                 .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.CartItems)
+                .WithOne(ci => ci.Product)
+                .HasForeignKey(ci => ci.ProductId);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(u => u.CartItems)
+                .WithOne(ci => ci.User)
+                .HasForeignKey(ci => ci.UserId);
         }
     }
 }

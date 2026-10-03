@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject less1.Services.CartService Cart
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,18 +30,26 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Category" asp-action="Index">Categories</a>
-                        </li>                        
+                            <a class="nav-link text-dark" asp-controller="Category" asp-action="Index">Categories</a>
+                        </li>
                         @if (User.IsInRole("admin"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="Product" asp-action="Index">Products</a>
                             </li>
-                            
                         }
-                            
+                    </ul>
+
+                    <ul class="navbar-nav align-items-center">
                         <li class="nav-item">
-                            <partial name="_LoginPartial"/>
+                            <a asp-action="Index" asp-controller="Cart"
+                               class="nav-link cart-link position-relative d-flex align-items-center justify-content-center">
+                                <i class="bi bi-cart3 fs-5"></i>
+                                <span class="cart-badge">@Cart.Count()</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <partial name="_LoginPartial" />
                         </li>
                     </ul>
                 </div>
